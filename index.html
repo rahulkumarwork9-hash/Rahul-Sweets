@@ -1,83 +1,307 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul's Sweets & Cookies | The Essence Of Food</title>
+    <title>Rahul's Sweets & Cookies</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fff9f0; margin: 0; padding: 0; color: #333; }
-        header { background-color: #8b0000; color: #ffd700; text-align: center; padding: 25px 15px; border-bottom: 4px solid #ffd700; }
-        header h1 { margin: 0; font-size: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
-        header p { margin: 5px 0 0; font-size: 1rem; color: #fff; font-style: italic; }
-        .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
-        h2.category-title { color: #8b0000; border-bottom: 2px solid #ffd700; padding-bottom: 8px; margin-top: 30px; font-size: 1.4rem; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
-        .product-card { background: #fff; border-radius: 8px; padding: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border: 1px solid #f3d2c1; text-align: center; }
-        .product-card h3 { margin: 0 0 5px; color: #8b0000; font-size: 1rem; }
-        .product-card p { margin: 3px 0; color: #555; font-size: 0.85rem; }
-        .price { font-weight: bold; color: #b8860b; font-size: 1rem; margin: 8px 0; }
-        .order-btn { background-color: #8b0000; color: #ffd700; border: none; padding: 8px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; }
-        footer { background-color: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px; font-size: 0.8rem; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcf8f2;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+        }
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffcc00;
+            margin-bottom: 5px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #ffcc00;
+        }
+        header p {
+            margin: 3px 0 0;
+            font-size: 13px;
+            font-style: italic;
+        }
+        .container {
+            padding: 15px;
+            max-width: 600px;
+            margin: auto;
+        }
+        h2.section-title {
+            color: #8b0000;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 5px;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item-info {
+            flex-grow: 1;
+        }
+        .item-name {
+            font-size: 15px;
+            font-weight: bold;
+            color: #8b0000;
+            margin: 0 0 2px;
+        }
+        .item-weight {
+            font-size: 12px;
+            color: #666;
+            margin: 0 0 4px;
+        }
+        .item-price {
+            font-size: 14px;
+            font-weight: bold;
+            color: #b8860b;
+            margin: 0;
+        }
+        .order-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+        .qty-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .qty-box button {
+            background-color: #ddd;
+            border: none;
+            padding: 3px 7px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .qty-box input {
+            width: 25px;
+            text-align: center;
+            border: none;
+            font-size: 13px;
+        }
+        .checkout-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .checkout-box h3 {
+            color: #8b0000;
+            margin-top: 0;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 3px;
+            color: #444;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .whatsapp-order-btn {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .whatsapp-order-btn:hover {
+            background-color: #1ebe5d;
+        }
     </style>
 </head>
 <body>
+
     <header>
+        <img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
         <h1>Rahul's Sweets & Cookies</h1>
         <p>The Essence Of Food</p>
     </header>
+
     <div class="container">
-        <!-- Products -->
-        <h2 class="category-title">🍪 Healthy Cookies</h2>
-        <div class="product-grid">
-            <div class="product-card"><h3>Honey Oats</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Honey Oats Cookies', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Double Choc</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Double Chocolate Cookies', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Kaju Pista</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Kaju Pista Cookies', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Gur Till</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Gur Till Cookies', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Choc Biscuitti</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Chocolate Biscuitti', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Multigrain</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Multigrain Cookies', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Raisin Oats</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Raisin Oats', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Red Velvet</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Red Velvet Cookies', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Flaxseed</h3><p>300 Gm</p><div class="price">Rs 399/-</div><button class="order-btn" onclick="orderItem('Flaxseed Cookies', 'Rs 399/-')">Order</button></div>
-            <div class="product-card"><h3>Atta</h3><p>400 Gm</p><div class="price">Rs 349/-</div><button class="order-btn" onclick="orderItem('Atta Cookies', 'Rs 349/-')">Order</button></div>
-            <div class="product-card"><h3>Ajwain</h3><p>400 Gm</p><div class="price">Rs 349/-</div><button class="order-btn" onclick="orderItem('Ajwain Cookies', 'Rs 349/-')">Order</button></div>
-            <div class="product-card"><h3>Coconut</h3><p>350 Gm</p><div class="price">Rs 349/-</div><button class="order-btn" onclick="orderItem('Coconut Cookies', 'Rs 349/-')">Order</button></div>
-            <div class="product-card"><h3>Jeera</h3><p>400 Gm</p><div class="price">Rs 349/-</div><button class="order-btn" onclick="orderItem('Jeera Cookies', 'Rs 349/-')">Order</button></div>
+        <h2 class="section-title">🍪 Select Items & Quantity</h2>
+
+        <!-- Item 1 -->
+        <div class="card">
+            <div class="item-info">
+                <p class="item-name">Honey Oats</p>
+                <p class="item-weight">300 Gm</p>
+                <p class="item-price">Rs 399/-</p>
+            </div>
+            <div class="order-section">
+                <div class="qty-box">
+                    <button onclick="changeQty('qty1', -1)">-</button>
+                    <input type="text" id="qty1" value="0" readonly>
+                    <button onclick="changeQty('qty1', 1)">+</button>
+                </div>
+            </div>
         </div>
-        <h2 class="category-title">🍰 Dry Cakes & Muffins</h2>
-        <div class="product-grid">
-            <div class="product-card"><h3>Mawa Dry Cake</h3><p>250 Gm</p><div class="price">Rs 209/-</div><button class="order-btn" onclick="orderItem('Mawa Dry Cake', 'Rs 209/-')">Order</button></div>
-            <div class="product-card"><h3>Walnut Crunch</h3><p>250 Gm</p><div class="price">Rs 249/-</div><button class="order-btn" onclick="orderItem('Walnut Crunch Cake', 'Rs 249/-')">Order</button></div>
-            <div class="product-card"><h3>Choc Mud Cake</h3><p>250 Gm</p><div class="price">Rs 209/-</div><button class="order-btn" onclick="orderItem('Chocolate Mud Cake', 'Rs 209/-')">Order</button></div>
-            <div class="product-card"><h3>Banana Walnut</h3><p>250 Gm</p><div class="price">Rs 249/-</div><button class="order-btn" onclick="orderItem('Banana Walnut Cake', 'Rs 249/-')">Order</button></div>
-            <div class="product-card"><h3>Vanilla Tea Cake</h3><p>250 Gm</p><div class="price">Rs 189/-</div><button class="order-btn" onclick="orderItem('Vanilla Tea Cake', 'Rs 189/-')">Order</button></div>
-            <div class="product-card"><h3>Assorted Muffins</h3><p>4 Pc</p><div class="price">Rs 109/-</div><button class="order-btn" onclick="orderItem('Assorted Muffins', 'Rs 109/-')">Order</button></div>
+
+        <!-- Item 2 -->
+        <div class="card">
+            <div class="item-info">
+                <p class="item-name">Double Choc</p>
+                <p class="item-weight">300 Gm</p>
+                <p class="item-price">Rs 399/-</p>
+            </div>
+            <div class="order-section">
+                <div class="qty-box">
+                    <button onclick="changeQty('qty2', -1)">-</button>
+                    <input type="text" id="qty2" value="0" readonly>
+                    <button onclick="changeQty('qty2', 1)">+</button>
+                </div>
+            </div>
         </div>
-        <h2 class="category-title">🥨 Namkeen</h2>
-        <div class="product-grid">
-            <div class="product-card"><h3>Namak Para</h3><p>250 Gm</p><div class="price">Rs 119/-</div><button class="order-btn" onclick="orderItem('Namak Para', 'Rs 119/-')">Order</button></div>
-            <div class="product-card"><h3>Kali Mirch Mathri</h3><p>400 Gm</p><div class="price">Rs 219/-</div><button class="order-btn" onclick="orderItem('Kali Mirch Mathri', 'Rs 219/-')">Order</button></div>
-            <div class="product-card"><h3>Mini Samosa</h3><p>400 Gm</p><div class="price">Rs 219/-</div><button class="order-btn" onclick="orderItem('Mini Samosa', 'Rs 219/-')">Order</button></div>
-            <div class="product-card"><h3>Mini Kachori</h3><p>400 Gm</p><div class="price">Rs 219/-</div><button class="order-btn" onclick="orderItem('Mini Kachori', 'Rs 219/-')">Order</button></div>
-            <div class="product-card"><h3>Methi Roll</h3><p>400 Gm</p><div class="price">Rs 219/-</div><button class="order-btn" onclick="orderItem('Methi Roll', 'Rs 219/-')">Order</button></div>
+
+        <!-- Item 3 -->
+        <div class="card">
+            <div class="item-info">
+                <p class="item-name">Kaju Pista</p>
+                <p class="item-weight">300 Gm</p>
+                <p class="item-price">Rs 399/-</p>
+            </div>
+            <div class="order-section">
+                <div class="qty-box">
+                    <button onclick="changeQty('qty3', -1)">-</button>
+                    <input type="text" id="qty3" value="0" readonly>
+                    <button onclick="changeQty('qty3', 1)">+</button>
+                </div>
+            </div>
         </div>
-        <h2 class="category-title">🍬 Sweets</h2>
-        <div class="product-grid">
-            <div class="product-card"><h3>Kaju Katli</h3><p>Per Kg</p><div class="price">Rs 1400/-</div><button class="order-btn" onclick="orderItem('Kaju Katli', 'Rs 1400/-')">Order</button></div>
-            <div class="product-card"><h3>Anjeer Burfi</h3><p>Per Kg</p><div class="price">Rs 1600/-</div><button class="order-btn" onclick="orderItem('Anjeer Burfi', 'Rs 1600/-')">Order</button></div>
-            <div class="product-card"><h3>Milk Cake</h3><p>Per Kg</p><div class="price">Rs 650/-</div><button class="order-btn" onclick="orderItem('Milk Cake', 'Rs 650/-')">Order</button></div>
-            <div class="product-card"><h3>Channa Burfi</h3><p>Per Kg</p><div class="price">Rs 800/-</div><button class="order-btn" onclick="orderItem('Channa Burfi', 'Rs 800/-')">Order</button></div>
-            <div class="product-card"><h3>Dhoda Burfi</h3><p>Per Kg</p><div class="price">Rs 700/-</div><button class="order-btn" onclick="orderItem('Dhoda Burfi', 'Rs 700/-')">Order</button></div>
-            <div class="product-card"><h3>Khajoor Ladoo</h3><p>Per Kg</p><div class="price">Rs 900/-</div><button class="order-btn" onclick="orderItem('Khajoor Ladoo', 'Rs 900/-')">Order</button></div>
-            <div class="product-card"><h3>Dry Fruit Ladoo</h3><p>Per Kg</p><div class="price">Rs 1500/-</div><button class="order-btn" onclick="orderItem('Dry Fruit Ladoo', 'Rs 1500/-')">Order</button></div>
-            <div class="product-card"><h3>Mix Mewa Bite</h3><p>Per Kg</p><div class="price">Rs 1400/-</div><button class="order-btn" onclick="orderItem('Mix Mewa Bite', 'Rs 1400/-')">Order</button></div>
+
+        <!-- Customer Details & Checkout Form -->
+        <div class="checkout-box">
+            <h3>📋 Customer Details & Checkout</h3>
+            <div class="form-group">
+                <label>Full Name (पूरा नाम):</label>
+                <input type="text" id="custName" placeholder="अपना नाम लिखें">
+            </div>
+            <div class="form-group">
+                <label>Phone Number (मोबाइल नंबर):</label>
+                <input type="tel" id="custPhone" placeholder="10 अंकों का मोबाइल नंबर">
+            </div>
+            <div class="form-group">
+                <label>Delivery Address (पूरा पता):</label>
+                <textarea id="custAddress" rows="3" placeholder="घर का नंबर, गली, इलाका, पिनकोड"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Payment Method (भुगतान का तरीका):</label>
+                <select id="payMethod">
+                    <option value="Cash on Delivery (COD)">Cash on Delivery (कैश ऑन डिलीवरी)</option>
+                    <option value="Online UPI / QR Payment">Online UPI / QR Payment (ऑनलाइन पेमेंट)</option>
+                </select>
+            </div>
+            <button class="whatsapp-order-btn" onclick="sendWhatsAppOrder()">📲 Send Order on WhatsApp</button>
         </div>
     </div>
-    <footer><p>&copy; 2026 Rahul's Sweets & Cookies | rahulkumar.work9@gmail.com</p></footer>
+
     <script>
-        function orderItem(productName, price) {
-            window.location.href = "mailto:rahulkumar.work9@gmail.com?subject=New Order: " + productName + "&body=I want to order " + productName + " for " + price;
+        function changeQty(id, val) {
+            let input = document.getElementById(id);
+            let currentVal = parseInt(input.value);
+            let newVal = currentVal + val;
+            if (newVal >= 0) {
+                input.value = newVal;
+            }
+        }
+
+        function sendWhatsAppOrder() {
+            let name = document.getElementById('custName').value.trim();
+            let phone = document.getElementById('custPhone').value.trim();
+            let address = document.getElementById('custAddress').value.trim();
+            let payment = document.getElementById('payMethod').value;
+
+            let q1 = parseInt(document.getElementById('qty1').value);
+            let q2 = parseInt(document.getElementById('qty2').value);
+            let q3 = parseInt(document.getElementById('qty3').value);
+
+            if(!name || !phone || !address) {
+                alert("कृपया अपना नाम, मोबाइल नंबर और पूरा पता भरें!");
+                return;
+            }
+
+            if(q1 === 0 && q2 === 0 && q3 === 0) {
+                alert("कृपया कम से कम एक आइटम की मात्रा (+) चुनें!");
+                return;
+            }
+
+            let orderDetails = "";
+            let totalAmount = 0;
+
+            if(q1 > 0) {
+                let cost = q1 * 399;
+                orderDetails += `👉 Honey Oats (300Gm) x ${q1} = Rs ${cost}/-\n`;
+                totalAmount += cost;
+            }
+            if(q2 > 0) {
+                let cost = q2 * 399;
+                orderDetails += `👉 Double Choc (300Gm) x ${q2} = Rs ${cost}/-\n`;
+                totalAmount += cost;
+            }
+            if(q3 > 0) {
+                let cost = q3 * 399;
+                orderDetails += `👉 Kaju Pista (300Gm) x ${q3} = Rs ${cost}/-\n`;
+                totalAmount += cost;
+            }
+
+            let myWhatsAppNumber = "918168099393";
+
+            let finalMessage = `🛒 *New Order - Rahul's Sweets* 🛒\n\n` +
+                               `👤 *Name:* ${name}\n` +
+                               `📞 *Phone:* ${phone}\n` +
+                               `📍 *Address:* ${address}\n\n` +
+                               `📦 *Items Ordered:*\n${orderDetails}\n` +
+                               `💰 *Total Amount:* Rs ${totalAmount}/-\n` +
+                               `💳 *Payment Mode:* ${payment}\n\n` +
+                               `Kripya order confirm karein!`;
+
+            let url = `https://wa.me/${myWhatsAppNumber}?text=${encodeURIComponent(finalMessage)}`;
+            window.open(url, '_blank');
         }
     </script>
+
 </body>
 </html>
