@@ -45,7 +45,7 @@
             color: #8b0000;
             border-bottom: 2px solid #ffcc00;
             padding-bottom: 5px;
-            margin-top: 15px;
+            margin-top: 20px;
             font-size: 18px;
         }
         .card {
@@ -162,54 +162,149 @@
     </header>
 
     <div class="container">
-        <h2 class="section-title">🍪 Select Items & Quantity</h2>
-
-        <!-- Item 1 -->
+        
+        <!-- Healthy Cookies -->
+        <h2 class="section-title">🍪 Healthy Cookies</h2>
+        
         <div class="card">
-            <div class="item-info">
-                <p class="item-name">Honey Oats</p>
-                <p class="item-weight">300 Gm</p>
-                <p class="item-price">Rs 399/-</p>
-            </div>
-            <div class="order-section">
-                <div class="qty-box">
-                    <button onclick="changeQty('qty1', -1)">-</button>
-                    <input type="text" id="qty1" value="0" readonly>
-                    <button onclick="changeQty('qty1', 1)">+</button>
-                </div>
-            </div>
+            <div class="item-info"><p class="item-name">Honey Oats Cookies</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q1', -1)">-</button><input type="text" id="q1" value="0" readonly><button onclick="changeQty('q1', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Double Chocolate Cookies</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q2', -1)">-</button><input type="text" id="q2" value="0" readonly><button onclick="changeQty('q2', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Kaju Pista Cookies</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q3', -1)">-</button><input type="text" id="q3" value="0" readonly><button onclick="changeQty('q3', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Gur Till Cookies</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q4', -1)">-</button><input type="text" id="q4" value="0" readonly><button onclick="changeQty('q4', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Chocolate Biscuitti</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q5', -1)">-</button><input type="text" id="q5" value="0" readonly><button onclick="changeQty('q5', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Multigrain Cookies</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q6', -1)">-</button><input type="text" id="q6" value="0" readonly><button onclick="changeQty('q6', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Raisin Oats</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q7', -1)">-</button><input type="text" id="q7" value="0" readonly><button onclick="changeQty('q7', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Red Velvet Cookies</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q8', -1)">-</button><input type="text" id="q8" value="0" readonly><button onclick="changeQty('q8', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Flaxseed Cookies</p><p class="item-weight">300 Gm</p><p class="item-price">Rs 399/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q9', -1)">-</button><input type="text" id="q9" value="0" readonly><button onclick="changeQty('q9', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Atta Cookies</p><p class="item-weight">400 Gm</p><p class="item-price">Rs 349/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q10', -1)">-</button><input type="text" id="q10" value="0" readonly><button onclick="changeQty('q10', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Ajwain Cookies</p><p class="item-weight">400 Gm</p><p class="item-price">Rs 349/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q11', -1)">-</button><input type="text" id="q11" value="0" readonly><button onclick="changeQty('q11', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Coconut Cookies</p><p class="item-weight">350 Gm</p><p class="item-price">Rs 349/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q12', -1)">-</button><input type="text" id="q12" value="0" readonly><button onclick="changeQty('q12', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Jeera Cookies</p><p class="item-weight">400 Gm</p><p class="item-price">Rs 349/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q13', -1)">-</button><input type="text" id="q13" value="0" readonly><button onclick="changeQty('q13', 1)">+</button></div></div>
         </div>
 
-        <!-- Item 2 -->
+        <!-- Dry Cakes & Muffins -->
+        <h2 class="section-title">🍰 Dry Cakes & Muffins (Eggless)</h2>
+        
         <div class="card">
-            <div class="item-info">
-                <p class="item-name">Double Choc</p>
-                <p class="item-weight">300 Gm</p>
-                <p class="item-price">Rs 399/-</p>
-            </div>
-            <div class="order-section">
-                <div class="qty-box">
-                    <button onclick="changeQty('qty2', -1)">-</button>
-                    <input type="text" id="qty2" value="0" readonly>
-                    <button onclick="changeQty('qty2', 1)">+</button>
-                </div>
-            </div>
+            <div class="item-info"><p class="item-name">Mawa Dry Cake</p><p class="item-weight">250 Gm</p><p class="item-price">Rs 209/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q14', -1)">-</button><input type="text" id="q14" value="0" readonly><button onclick="changeQty('q14', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Walnut Crunch Cake</p><p class="item-weight">250 Gm</p><p class="item-price">Rs 249/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q15', -1)">-</button><input type="text" id="q15" value="0" readonly><button onclick="changeQty('q15', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Chocolate Mud Cake</p><p class="item-weight">250 Gm</p><p class="item-price">Rs 209/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q16', -1)">-</button><input type="text" id="q16" value="0" readonly><button onclick="changeQty('q16', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Banana Walnut Cake</p><p class="item-weight">250 Gm</p><p class="item-price">Rs 249/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q17', -1)">-</button><input type="text" id="q17" value="0" readonly><button onclick="changeQty('q17', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Vanilla Tea Cake</p><p class="item-weight">250 Gm</p><p class="item-price">Rs 189/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q18', -1)">-</button><input type="text" id="q18" value="0" readonly><button onclick="changeQty('q18', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Assorted Muffins (4 Pc)</p><p class="item-weight">160 Gm</p><p class="item-price">Rs 109/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q19', -1)">-</button><input type="text" id="q19" value="0" readonly><button onclick="changeQty('q19', 1)">+</button></div></div>
         </div>
 
-        <!-- Item 3 -->
+        <!-- Mathri's & Namkeen -->
+        <h2 class="section-title"> Namkeen & Mathri</h2>
+        
         <div class="card">
-            <div class="item-info">
-                <p class="item-name">Kaju Pista</p>
-                <p class="item-weight">300 Gm</p>
-                <p class="item-price">Rs 399/-</p>
-            </div>
-            <div class="order-section">
-                <div class="qty-box">
-                    <button onclick="changeQty('qty3', -1)">-</button>
-                    <input type="text" id="qty3" value="0" readonly>
-                    <button onclick="changeQty('qty3', 1)">+</button>
-                </div>
-            </div>
+            <div class="item-info"><p class="item-name">Namak Para</p><p class="item-weight">250 Gm</p><p class="item-price">Rs 119/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q20', -1)">-</button><input type="text" id="q20" value="0" readonly><button onclick="changeQty('q20', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Kali Mirch Mathri</p><p class="item-weight">400 Gm</p><p class="item-price">Rs 219/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q21', -1)">-</button><input type="text" id="q21" value="0" readonly><button onclick="changeQty('q21', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Mini Samosa</p><p class="item-weight">400 Gm</p><p class="item-price">Rs 219/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q22', -1)">-</button><input type="text" id="q22" value="0" readonly><button onclick="changeQty('q22', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Mini Kachori</p><p class="item-weight">400 Gm</p><p class="item-price">Rs 219/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q23', -1)">-</button><input type="text" id="q23" value="0" readonly><button onclick="changeQty('q23', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Methi Roll</p><p class="item-weight">400 Gm</p><p class="item-price">Rs 219/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q24', -1)">-</button><input type="text" id="q24" value="0" readonly><button onclick="changeQty('q24', 1)">+</button></div></div>
+        </div>
+
+        <!-- Sweets -->
+        <h2 class="section-title">🍬 Sweets</h2>
+        
+        <div class="card">
+            <div class="item-info"><p class="item-name">Kaju Katli</p><p class="item-weight">Per Kg</p><p class="item-price">Rs 1400/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q25', -1)">-</button><input type="text" id="q25" value="0" readonly><button onclick="changeQty('q25', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Anjeer Cut Burfi</p><p class="item-weight">Per Kg</p><p class="item-price">Rs 1600/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q26', -1)">-</button><input type="text" id="q26" value="0" readonly><button onclick="changeQty('q26', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Milk Cake</p><p class="item-weight">Per Kg</p><p class="item-price">Rs 650/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q27', -1)">-</button><input type="text" id="q27" value="0" readonly><button onclick="changeQty('q27', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Channa Dry Fruit Burfi</p><p class="item-weight">Per Kg</p><p class="item-price">Rs 800/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q28', -1)">-</button><input type="text" id="q28" value="0" readonly><button onclick="changeQty('q28', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Dhoda Burfi</p><p class="item-weight">Per Kg</p><p class="item-price">Rs 700/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q29', -1)">-</button><input type="text" id="q29" value="0" readonly><button onclick="changeQty('q29', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Khajoor Ladoo</p><p class="item-weight">Per Kg</p><p class="item-price">Rs 900/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q30', -1)">-</button><input type="text" id="q30" value="0" readonly><button onclick="changeQty('q30', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Dry Fruit Ladoo</p><p class="item-weight">Per Kg</p><p class="item-price">Rs 1500/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q31', -1)">-</button><input type="text" id="q31" value="0" readonly><button onclick="changeQty('q31', 1)">+</button></div></div>
+        </div>
+        <div class="card">
+            <div class="item-info"><p class="item-name">Mix Mewa Bite</p><p class="item-weight">Per Kg</p><p class="item-price">Rs 1400/-</p></div>
+            <div class="order-section"><div class="qty-box"><button onclick="changeQty('q32', -1)">-</button><input type="text" id="q32" value="0" readonly><button onclick="changeQty('q32', 1)">+</button></div></div>
         </div>
 
         <!-- Customer Details & Checkout Form -->
@@ -239,6 +334,41 @@
     </div>
 
     <script>
+        const itemsData = {
+            q1: { name: "Honey Oats Cookies", price: 399 },
+            q2: { name: "Double Chocolate Cookies", price: 399 },
+            q3: { name: "Kaju Pista Cookies", price: 399 },
+            q4: { name: "Gur Till Cookies", price: 399 },
+            q5: { name: "Chocolate Biscuitti", price: 399 },
+            q6: { name: "Multigrain Cookies", price: 399 },
+            q7: { name: "Raisin Oats", price: 399 },
+            q8: { name: "Red Velvet Cookies", price: 399 },
+            q9: { name: "Flaxseed Cookies", price: 399 },
+            q10: { name: "Atta Cookies", price: 349 },
+            q11: { name: "Ajwain Cookies", price: 349 },
+            q12: { name: "Coconut Cookies", price: 349 },
+            q13: { name: "Jeera Cookies", price: 349 },
+            q14: { name: "Mawa Dry Cake", price: 209 },
+            q15: { name: "Walnut Crunch Cake", price: 249 },
+            q16: { name: "Chocolate Mud Cake", price: 209 },
+            q17: { name: "Banana Walnut Cake", price: 249 },
+            q18: { name: "Vanilla Tea Cake", price: 189 },
+            q19: { name: "Assorted Muffins (4 Pc)", price: 109 },
+            q20: { name: "Namak Para", price: 119 },
+            q21: { name: "Kali Mirch Mathri", price: 219 },
+            q22: { name: "Mini Samosa", price: 219 },
+            q23: { name: "Mini Kachori", price: 219 },
+            q24: { name: "Methi Roll", price: 219 },
+            q25: { name: "Kaju Katli (Per Kg)", price: 1400 },
+            q26: { name: "Anjeer Cut Burfi (Per Kg)", price: 1600 },
+            q27: { name: "Milk Cake (Per Kg)", price: 650 },
+            q28: { name: "Channa Dry Fruit Burfi (Per Kg)", price: 800 },
+            q29: { name: "Dhoda Burfi (Per Kg)", price: 700 },
+            q30: { name: "Khajoor Ladoo (Per Kg)", price: 900 },
+            q31: { name: "Dry Fruit Ladoo (Per Kg)", price: 1500 },
+            q32: { name: "Mix Mewa Bite (Per Kg)", price: 1400 }
+        };
+
         function changeQty(id, val) {
             let input = document.getElementById(id);
             let currentVal = parseInt(input.value);
@@ -254,37 +384,28 @@
             let address = document.getElementById('custAddress').value.trim();
             let payment = document.getElementById('payMethod').value;
 
-            let q1 = parseInt(document.getElementById('qty1').value);
-            let q2 = parseInt(document.getElementById('qty2').value);
-            let q3 = parseInt(document.getElementById('qty3').value);
-
             if(!name || !phone || !address) {
                 alert("कृपया अपना नाम, मोबाइल नंबर और पूरा पता भरें!");
                 return;
             }
 
-            if(q1 === 0 && q2 === 0 && q3 === 0) {
-                alert("कृपया कम से कम एक आइटम की मात्रा (+) चुनें!");
-                return;
-            }
-
             let orderDetails = "";
             let totalAmount = 0;
+            let hasItem = false;
 
-            if(q1 > 0) {
-                let cost = q1 * 399;
-                orderDetails += `👉 Honey Oats (300Gm) x ${q1} = Rs ${cost}/-\n`;
-                totalAmount += cost;
+            for (let key in itemsData) {
+                let qty = parseInt(document.getElementById(key).value);
+                if (qty > 0) {
+                    hasItem = true;
+                    let cost = qty * itemsData[key].price;
+                    orderDetails += `👉 ${itemsData[key].name} x ${qty} = Rs ${cost}/-\n`;
+                    totalAmount += cost;
+                }
             }
-            if(q2 > 0) {
-                let cost = q2 * 399;
-                orderDetails += `👉 Double Choc (300Gm) x ${q2} = Rs ${cost}/-\n`;
-                totalAmount += cost;
-            }
-            if(q3 > 0) {
-                let cost = q3 * 399;
-                orderDetails += `👉 Kaju Pista (300Gm) x ${q3} = Rs ${cost}/-\n`;
-                totalAmount += cost;
+
+            if(!hasItem) {
+                alert("कृपया कम से कम एक आइटम की मात्रा (+) चुनें!");
+                return;
             }
 
             let myWhatsAppNumber = "918168099393";
